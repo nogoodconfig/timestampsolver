@@ -1,5 +1,7 @@
 # Timestamp Solver
 
+🚀 **Try it now**: [https://nogoodconfig.github.io/timestampsolver/](https://nogoodconfig.github.io/timestampsolver/)
+
 A powerful web-based tool for solving and converting various timestamp formats. Convert between Unix timestamps, Apple Cocoa timestamps, Windows FILETIME, and many other formats with ease.
 
 ## Features
