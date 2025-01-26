@@ -1,38 +1,20 @@
 const bcdFormat = {
-    name: 'Binary Coded Decimal',
+    name: 'BCD',
     
     matches(input) {
-        return /^[0-9A-F]+$/i.test(input);
+        // Match either:
+        // 1. Continuous hex string of 12 or 14 digits
+        // 2. Space-separated hex bytes (6 or 7 pairs)
+        return /^[0-9a-f]{12,14}$/i.test(input.replace(/\s+/g, '')) ||
+               /^([0-9a-f]{2}\s+){5,6}[0-9a-f]{2}$/i.test(input);
     },
     
     convert(input) {
         try {
-            const values = [];
-            
-            // Try as 2-digit year BCD
-            if (input.length === 6) { // YYMMDD
-                const year = parseInt(input.slice(0, 2), 16);
-                const month = parseInt(input.slice(2, 4), 16);
-                const day = parseInt(input.slice(4, 6), 16);
-                if (year <= 99 && month <= 12 && day <= 31) {
-                    const fullYear = year + (year < 70 ? 2000 : 1900);
-                    const date = new Date(Date.UTC(fullYear, month - 1, day));
-                    values.push(Math.floor(date.getTime() / 1000));
-                }
-            }
-            
-            // Try as 4-digit year BCD
-            if (input.length === 8) { // YYYYMMDD
-                const year = parseInt(input.slice(0, 4), 16);
-                const month = parseInt(input.slice(4, 6), 16);
-                const day = parseInt(input.slice(6, 8), 16);
-                if (year >= 1900 && year <= 2099 && month <= 12 && day <= 31) {
-                    const date = new Date(Date.UTC(year, month - 1, day));
-                    values.push(Math.floor(date.getTime() / 1000));
-                }
-            }
-
-            return values;
+            // Remove spaces and convert each hex digit to decimal
+            const hex = input.replace(/\s+/g, '');
+            const bcd = hex.split('').map(h => parseInt(h, 16)).join('');
+            return [parseInt(bcd, 10)];
         } catch (e) {
             return [];
         }

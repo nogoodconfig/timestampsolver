@@ -1,58 +1,82 @@
 const bcdReverseTimestampConverter = {
     id: 'bcdReverseTimestamp',
     name: 'Binary Coded Decimal (BCD) Reverse Nibble',
-    description: 'Converts Binary Coded Decimal timestamps with reversed nibbles',
-    infoUrl: 'https://en.wikipedia.org/wiki/Binary-coded_decimal',
+    description: 'Converts Binary-Coded Decimal timestamps with reversed nibbles (6 bytes: YY MM DD HH MM SS)',
+    infoUrl: 'https://www.digital-detective.net/binary-coded-decimal-timestamps/',
 
-    // BCD format with reversed nibbles: YYYYMMDDHHMMSS or YYMMDDHHMMSS
     isValid: function(input) {
-        // Check if the input matches BCD pattern
-        return /^[0-9A-Fa-f]{12,14}$/.test(input);
+        // Input should be a hex string of 12 digits
+        return typeof input === 'string' && /^[0-9a-f]{12}$/i.test(input);
     },
 
-    parseInput: function(input) {
-        // Remove any non-hex characters and reverse each nibble
-        const cleaned = input.replace(/[^0-9A-Fa-f]/g, '');
-        return cleaned.split('').map(c => {
+    reverseNibbles: function(input) {
+        return input.split('').map(c => {
             const n = parseInt(c, 16);
             return ((n << 4) | (n >> 4) & 0xF).toString(16);
         }).join('');
     },
 
     convert: function(input) {
-        const bcd = this.parseInput(input);
-        const is2DigitYear = bcd.length === 12;
-        let year, month, day, hour, minute, second;
+        if (!this.isValid(input)) return null;
 
-        // Convert each BCD pair to decimal
-        if (is2DigitYear) {
-            year = parseInt(bcd.substring(0, 2), 16);
-            // Assume years 00-69 are 2000-2069, 70-99 are 1970-1999
-            year = year < 70 ? 2000 + year : 1900 + year;
-            month = parseInt(bcd.substring(2, 4), 16) - 1; // 0-based month
-            day = parseInt(bcd.substring(4, 6), 16);
-            hour = parseInt(bcd.substring(6, 8), 16);
-            minute = parseInt(bcd.substring(8, 10), 16);
-            second = parseInt(bcd.substring(10, 12), 16);
-        } else {
-            year = parseInt(bcd.substring(0, 4), 16);
-            month = parseInt(bcd.substring(4, 6), 16) - 1; // 0-based month
-            day = parseInt(bcd.substring(6, 8), 16);
-            hour = parseInt(bcd.substring(8, 10), 16);
-            minute = parseInt(bcd.substring(10, 12), 16);
-            second = parseInt(bcd.substring(12, 14), 16);
-        }
+        try {
+            // First reverse the nibbles
+            const reversed = this.reverseNibbles(input);
+            
+            // Convert each hex digit to its decimal value
+            const decimalDigits = reversed.split('').map(d => parseInt(d, 16));
+            
+            // Combine pairs of digits
+            const year = decimalDigits[0] * 10 + decimalDigits[1];
+            const month = decimalDigits[2] * 10 + decimalDigits[3] - 1; // 0-based month
+            const day = decimalDigits[4] * 10 + decimalDigits[5];
+            const hour = decimalDigits[6] * 10 + decimalDigits[7];
+            const minute = decimalDigits[8] * 10 + decimalDigits[9];
+            const second = decimalDigits[10] * 10 + decimalDigits[11];
 
-        // Validate components
-        if (month < 0 || month > 11 || day < 1 || day > 31 ||
-            hour > 23 || minute > 59 || second > 59) {
+            // Validate components
+            if (month < 0 || month > 11 || day < 1 || day > 31 ||
+                hour > 23 || minute > 59 || second > 59) {
+                return null;
+            }
+
+            // Return the raw timestamp value
+            return input;
+        } catch {
             return null;
         }
-
-        return new Date(Date.UTC(year, month, day, hour, minute, second));
     },
 
     toDate: function(input) {
-        return this.convert(input);
+        if (!this.isValid(input)) return null;
+
+        try {
+            // First reverse the nibbles
+            const reversed = this.reverseNibbles(input);
+            
+            // Convert each hex digit to its decimal value
+            const decimalDigits = reversed.split('').map(d => parseInt(d, 16));
+            
+            // Combine pairs of digits
+            const year = decimalDigits[0] * 10 + decimalDigits[1];
+            const month = decimalDigits[2] * 10 + decimalDigits[3] - 1; // 0-based month
+            const day = decimalDigits[4] * 10 + decimalDigits[5];
+            const hour = decimalDigits[6] * 10 + decimalDigits[7];
+            const minute = decimalDigits[8] * 10 + decimalDigits[9];
+            const second = decimalDigits[10] * 10 + decimalDigits[11];
+
+            // Validate components
+            if (month < 0 || month > 11 || day < 1 || day > 31 ||
+                hour > 23 || minute > 59 || second > 59) {
+                return null;
+            }
+
+            // Assume years 00-69 are 2000-2069, 70-99 are 1970-1999
+            const fullYear = year < 70 ? 2000 + year : 1900 + year;
+            
+            return new Date(Date.UTC(fullYear, month, day, hour, minute, second));
+        } catch {
+            return null;
+        }
     }
 }; 
