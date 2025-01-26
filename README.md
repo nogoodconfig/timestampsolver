@@ -2,7 +2,7 @@
 
 🚀 **Try it now**: [https://nogoodconfig.github.io/timestampsolver/](https://nogoodconfig.github.io/timestampsolver/)
 
-A powerful web-based tool for solving and converting various timestamp formats. Convert between Unix timestamps, Apple Cocoa timestamps, Windows FILETIME, and many other formats with ease.
+A tool for digital forensics investigators and researchers to identify and convert unknown timestamp formats. Quickly analyze and convert between Unix timestamps, Apple Cocoa timestamps, Windows FILETIME, and many other formats commonly encountered in digital forensics and research.
 
 ## Features
 
@@ -12,6 +12,7 @@ A powerful web-based tool for solving and converting various timestamp formats. 
   - Windows timestamps (FILETIME, SYSTEMTIME, MS-DOS FAT)
   - Network protocol timestamps (GPS, Twitter Snowflake, Discord Snowflake)
   - Database timestamps (LDAP, SQLite Julian Day, SAS)
+  - Forensic artifacts timestamps (NTFS, HFS, Exchange)
   - And many more...
 
 - **Input Format Support**:
