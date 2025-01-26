@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1b1e">
+    <title>Timestamp Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-layout">
+        <div class="sidebar collapsed">
+            <div class="sidebar-header" role="button" tabindex="0">
+                <h3>Input Formats</h3>
+                <svg class="chevron-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 6l-6 6 6 6"/>
+                </svg>
+            </div>
+            <div class="sidebar-content">
+                <label class="format-option">
+                    <input type="radio" name="format" value="all" checked>
+                    <div class="format-details">
+                        <span class="format-name">All Formats</span>
+                        <p class="format-description">Try all available input formats</p>
+                    </div>
+                </label>
+                <div class="format-list">
+                    <!-- Format options will be added here by JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Timestamp Solver</h1>
+            <div class="input-container">
+                <textarea id="timestampInput" placeholder="Enter timestamp value (e.g. 1710834477, 0x65f9b44d, 1710834477000)"></textarea>
+            </div>
+            <div id="cardGrid" class="card-grid"></div>
+        </div>
+    </div>
+
+    <!-- Load timestamp converters -->
+    <!-- Unix timestamps -->
+    <script src="converters/epochSeconds.js"></script>
+    <script src="converters/epochMillis.js"></script>
+    <script src="converters/epochMicros.js"></script>
+    <script src="converters/epochNanos.js"></script>
+    
+    <!-- Apple timestamps -->
+    <script src="converters/cocoaSeconds.js"></script>
+    <script src="converters/cocoaMillis.js"></script>
+    <script src="converters/cocoaMicros.js"></script>
+    <script src="converters/cocoaNanos.js"></script>
+    <script src="converters/appleHfs.js"></script>
+    <script src="converters/macHfsXattr.js"></script>
+    <script src="converters/macClassic.js"></script>
+    
+    <!-- Windows timestamps -->
+    <script src="converters/windowsFiletime.js"></script>
+    <script src="converters/msdosFat.js"></script>
+    <script src="converters/ntfsTimestamp.js"></script>
+    <script src="converters/systemTime.js"></script>
+    <script src="converters/exchangeTimestamp.js"></script>
+    <script src="converters/oleAutomation.js"></script>
+    
+    <!-- Network/Protocol timestamps -->
+    <script src="converters/gpsTime.js"></script>
+    <script src="converters/gpsWeekSecond.js"></script>
+    <script src="converters/twitterSnowflake.js"></script>
+    <script src="converters/discordSnowflake.js"></script>
+    <script src="converters/uuidTimestamp.js"></script>
+    <script src="converters/chromiumMicros.js"></script>
+    <script src="converters/webkitTimestamp.js"></script>
+    <script src="converters/bbgidTimestamp.js"></script>
+    
+    <!-- Database/System timestamps -->
+    <script src="converters/ldapTimestamp.js"></script>
+    <script src="converters/sqliteJulian.js"></script>
+    <script src="converters/vmsTimestamp.js"></script>
+    <script src="converters/posixTimespec.js"></script>
+    <script src="converters/sasDatetime.js"></script>
+    <script src="converters/sasDate.js"></script>
+    
+    <!-- Standard formats -->
+    <script src="converters/isoWeekDate.js"></script>
+    <script src="converters/julianDay.js"></script>
+    <script src="converters/taiTimestamp.js"></script>
+    <script src="converters/irigTimecode.js"></script>
+    <script src="converters/smpteTimecode.js"></script>
+    <script src="converters/midiTimestamp.js"></script>
+    <script src="converters/rfc2550.js"></script>
+    
+    <!-- Load input format converters -->
+    <!-- Basic formats -->
+    <script src="inputFormats/decimal.js"></script>
+    <script src="inputFormats/hex.js"></script>
+    <script src="inputFormats/hexBytes.js"></script>
+    <script src="inputFormats/binary.js"></script>
+    <script src="inputFormats/littleEndian.js"></script>
+    <script src="inputFormats/bcd.js"></script>
+    
+    <!-- Special formats -->
+    <script src="inputFormats/gsm.js"></script>
+    <script src="inputFormats/uuid.js"></script>
+    <script src="inputFormats/javaInstant.js"></script>
+    <script src="inputFormats/ldapTime.js"></script>
+    <script src="inputFormats/isoWeek.js"></script>
+    <script src="inputFormats/irig.js"></script>
+    <script src="inputFormats/gpsWeek.js"></script>
+    <script src="inputFormats/smpte.js"></script>
+    <script src="inputFormats/rfc2550.js"></script>
+    
+    <!-- Load main app -->
+    <script src="app.js"></script>
+</body>
+</html> 
