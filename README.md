@@ -1,8 +1,10 @@
+![Timestamp Solver Logo](favicon.png)
+
 # Timestamp Solver
 
 🚀 **Try it now**: [https://nogoodconfig.github.io/timestampsolver/](https://nogoodconfig.github.io/timestampsolver/)
 
-A tool for digital forensics investigators and researchers to identify and convert unknown timestamp formats. Quickly analyze and convert between Unix timestamps, Apple Cocoa timestamps, Windows FILETIME, and many other formats commonly encountered in digital forensics and research.
+A specialized web-based tool for digital forensics investigators and researchers to identify and convert unknown timestamp formats. Quickly analyze and convert between Unix timestamps, Apple Cocoa timestamps, Windows FILETIME, and many other formats commonly encountered in digital forensics and research.
 
 ## Features
 
