@@ -1,6 +1,4 @@
-![Timestamp Solver Logo](favicon.png)
-
-# Timestamp Solver
+![Timestamp Solver Logo](favicon.png) # Timestamp Solver
 
 🚀 **Try it now**: [https://timestampsolver.com/](https://timestampsolver.com/)
 
