@@ -1,7 +1,8 @@
 const epochMillisConverter = {
+    id: 'epochMillis',
     name: 'Unix Epoch (Milliseconds)',
     description: 'Unix timestamp in milliseconds since January 1, 1970',
-    infoUrl: 'https://currentmillis.com/',
+    infoUrl: 'https://en.wikipedia.org/wiki/Unix_time',
     
     // Constants for validation
     MIN_TIMESTAMP: -62135596800000, // 0001-01-01T00:00:00.000Z

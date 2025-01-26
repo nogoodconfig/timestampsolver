@@ -1,4 +1,5 @@
 const epochNanosConverter = {
+    id: 'epochNanos',
     name: 'Unix Epoch (Nanoseconds)',
     description: 'Unix timestamp in nanoseconds since January 1, 1970',
     infoUrl: 'https://en.wikipedia.org/wiki/Unix_time',

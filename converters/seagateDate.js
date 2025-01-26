@@ -1,4 +1,5 @@
 const seagateDateConverter = {
+    id: 'seagateDate',
     name: 'Seagate Date Code',
     description: 'Seagate hard drive manufacturing date code (YYWW)',
     infoUrl: 'https://www.seagate.com/support/warranty-and-replacements/date-code-lookup/',

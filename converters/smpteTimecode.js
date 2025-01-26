@@ -1,4 +1,5 @@
 const smpteTimecodeConverter = {
+    id: 'smpteTimecode',
     name: 'SMPTE Timecode',
     description: 'SMPTE timecode format (HH:MM:SS:FF)',
     infoUrl: 'https://en.wikipedia.org/wiki/SMPTE_timecode',

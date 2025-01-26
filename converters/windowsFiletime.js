@@ -1,4 +1,5 @@
 const windowsFiletimeConverter = {
+    id: 'windowsFiletime',
     name: 'Windows Filetime',
     description: 'Windows FILETIME timestamp in 100-nanosecond intervals since January 1, 1601',
     infoUrl: 'https://learn.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-filetime',

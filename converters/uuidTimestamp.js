@@ -1,4 +1,5 @@
 const uuidTimestampConverter = {
+    id: 'uuidTimestamp',
     name: 'UUID v1 Timestamp',
     description: 'UUID version 1 timestamp in 100-nanosecond intervals since October 15, 1582',
     infoUrl: 'https://www.ietf.org/rfc/rfc4122.txt',

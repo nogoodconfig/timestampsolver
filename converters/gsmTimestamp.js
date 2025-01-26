@@ -1,4 +1,5 @@
 const gsmTimestampConverter = {
+    id: 'gsmTimestamp',
     name: 'GSM Timestamp',
     description: 'GSM/SMS timestamp in semi-octal format (YYMMDDHHMMSSZZ)',
     infoUrl: 'https://en.wikipedia.org/wiki/GSM_03.40',

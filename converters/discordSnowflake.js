@@ -1,4 +1,5 @@
 const discordSnowflakeConverter = {
+    id: 'discordSnowflake',
     name: 'Discord Snowflake ID',
     description: 'Discord Snowflake ID containing timestamp in milliseconds since January 1, 2015',
     infoUrl: 'https://discord.com/developers/docs/reference#snowflakes',

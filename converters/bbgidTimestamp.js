@@ -1,4 +1,5 @@
 const bbgidTimestampConverter = {
+    id: 'bbgidTimestamp',
     name: 'Bloomberg BBGID',
     description: 'Bloomberg Global ID embedded timestamp (microseconds since 2011-01-01)',
     infoUrl: 'https://www.bloomberg.com/professional/product/reference-data/',

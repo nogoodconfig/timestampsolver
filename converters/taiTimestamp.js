@@ -1,4 +1,5 @@
 const taiTimestampConverter = {
+    id: 'taiTimestamp',
     name: 'International Atomic Time (TAI)',
     description: 'TAI timestamp in seconds, including leap seconds since 1958',
     infoUrl: 'https://www.bipm.org/en/time-scale/tai',

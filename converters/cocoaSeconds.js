@@ -1,7 +1,8 @@
 const cocoaSecondsConverter = {
+    id: 'cocoaSeconds',
     name: 'Apple Cocoa (Seconds)',
-    description: 'Apple Cocoa/Foundation/PropertyList timestamp in seconds since January 1, 2001',
-    infoUrl: 'https://developer.apple.com/documentation/foundation/date',
+    description: 'Apple Cocoa/Core Data timestamp in seconds since January 1, 2001',
+    infoUrl: 'https://developer.apple.com/documentation/foundation/nsdate',
     
     // Cocoa reference date in Unix timestamp
     COCOA_REFERENCE: 978307200, // Unix timestamp for 2001-01-01 00:00:00

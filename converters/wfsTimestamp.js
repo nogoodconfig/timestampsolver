@@ -1,4 +1,5 @@
 const wfsTimestampConverter = {
+    id: 'wfsTimestamp',
     name: 'WFS File System',
     description: 'Write File System timestamp format used in some embedded systems',
     infoUrl: 'https://wfs.codeplex.com/',

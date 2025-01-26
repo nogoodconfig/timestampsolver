@@ -1,4 +1,5 @@
 const ntfsTimestampConverter = {
+    id: 'ntfsTimestamp',
     name: 'NTFS $FILE_NAME',
     description: 'NTFS file system timestamp in 100-nanosecond intervals since January 1, 1601',
     infoUrl: 'https://learn.microsoft.com/en-us/windows/win32/sysinfo/file-times',

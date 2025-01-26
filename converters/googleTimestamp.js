@@ -1,4 +1,5 @@
 const googleTimestampConverter = {
+    id: 'googleTimestamp',
     name: 'Google URL Parameters',
     description: 'Google search URL parameters (ei/ved) containing Unix microseconds',
     infoUrl: 'https://stackoverflow.com/questions/20068944/decoding-google-search-ei-parameter',

@@ -1,4 +1,5 @@
 const gpsTimeConverter = {
+    id: 'gpsTime',
     name: 'GPS Time',
     description: 'GPS time in seconds since January 6, 1980 00:00:00 UTC',
     infoUrl: 'https://www.gps.gov/technical/time/',

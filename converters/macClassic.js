@@ -1,4 +1,5 @@
 const macClassicConverter = {
+    id: 'macClassic',
     name: 'Mac OS Classic',
     description: 'Mac OS Classic timestamp in seconds since January 1, 1904',
     infoUrl: 'https://developer.apple.com/library/archive/documentation/mac/pdf/MacintoshToolboxEssentials.pdf',

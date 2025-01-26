@@ -1,4 +1,5 @@
 const ldapTimestampConverter = {
+    id: 'ldapTimestamp',
     name: 'LDAP/Active Directory',
     description: 'LDAP/Active Directory timestamp in 100-nanosecond intervals since January 1, 1601',
     infoUrl: 'https://ldapwiki.com/wiki/GeneralizedTime',

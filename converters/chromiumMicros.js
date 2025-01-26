@@ -1,4 +1,5 @@
 const chromiumMicrosConverter = {
+    id: 'chromiumMicros.js',
     name: 'Chromium Time (Microseconds)',
     description: 'Chromium timestamp in microseconds since January 1, 1601',
     infoUrl: 'https://chromium.googlesource.com/chromium/src/+/master/base/time/time.h',

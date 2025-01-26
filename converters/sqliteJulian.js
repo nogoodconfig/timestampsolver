@@ -1,4 +1,5 @@
 const sqliteJulianConverter = {
+    id: 'sqliteJulian',
     name: 'SQLite Julian Day',
     description: 'SQLite Julian day numbers with fractional part for time',
     infoUrl: 'https://www.sqlite.org/lang_datefunc.html',

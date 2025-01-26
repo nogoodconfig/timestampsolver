@@ -1,4 +1,5 @@
 const epochMicrosConverter = {
+    id: 'epochMicros',
     name: 'Unix Epoch (Microseconds)',
     description: 'Unix timestamp in microseconds since January 1, 1970',
     infoUrl: 'https://en.wikipedia.org/wiki/Unix_time',

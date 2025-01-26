@@ -1,4 +1,5 @@
 const epochSecondsConverter = {
+    id: 'epochSeconds',
     name: 'Unix Epoch (Seconds)',
     description: 'Unix timestamp in seconds since January 1, 1970',
     infoUrl: 'https://en.wikipedia.org/wiki/Unix_time',

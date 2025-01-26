@@ -18,50 +18,89 @@
  * - Test with edge cases (min/max values) for your timestamp format
  */
 
+// Template for creating new timestamp converters
+// To create a new converter:
+// 1. Copy this file and rename it to match your converter (e.g., myNewFormat.js)
+// 2. Update the converter object name to match (e.g., myNewFormatConverter)
+// 3. Fill in all the required properties and methods below
+// 4. Add your converter to the list in app.js
+
 const templateConverter = {
-    // Display name of the timestamp format
-    name: 'Format Name',
+    // Required: Unique identifier matching your filename (without .js)
+    id: 'template',
 
-    // Clear description of what this timestamp represents
-    description: 'Description of the timestamp format, including the epoch reference date',
+    // Required: Display name shown in the UI
+    name: 'Template Format',
 
-    // Link to official documentation or relevant information
-    infoUrl: 'https://link.to/documentation',
+    // Required: Brief description of the timestamp format
+    description: 'Description of what this timestamp format is and where it\'s used',
 
-    // Optional: Any constant values needed for conversion
-    // SOME_CONSTANT: value,
-
+    // Required: URL to documentation or information about this format
+    infoUrl: 'https://example.com/docs',
+    
+    // Optional: Any constants or configuration specific to this format
+    // Example: Epoch offsets, minimum/maximum values, etc.
+    SOME_CONSTANT: 123456789,
+    
     /**
-     * Validate if the number is a valid timestamp in this format
-     * @param {number} value - The numeric value to validate
-     * @returns {boolean} True if valid, false otherwise
+     * Required: Validates if the input could be a timestamp in this format
+     * @param {string|number} input - Raw input value to validate
+     * @returns {boolean} - True if the input is potentially valid in this format
      */
-    isValid(value) {
-        // Implement validation logic:
-        // - Check if value is within valid range for this format
-        // - Add any other format-specific validation
-        return value >= MIN_VALUE && value < MAX_VALUE;
+    isValid(input) {
+        try {
+            // Add validation logic here
+            // Example: Check if input is within valid range
+            const num = this.parseInput(input);
+            return num !== null && num >= MIN_VALUE && num <= MAX_VALUE;
+        } catch (e) {
+            return false;
+        }
     },
 
     /**
-     * Convert the input to this timestamp format
-     * @param {number} value - The numeric value to convert
-     * @returns {number} The converted timestamp
+     * Optional but recommended: Helper method to parse different input formats
+     * @param {string|number} input - Raw input to parse
+     * @returns {number|null} - Parsed number or null if invalid
      */
-    convert(value) {
-        return Math.floor(value);
+    parseInput(input) {
+        // Handle different input formats
+        if (typeof input === 'string') {
+            // Handle hex (0x prefix)
+            if (input.toLowerCase().startsWith('0x')) {
+                return parseInt(input, 16);
+            }
+            // Handle binary (0b prefix)
+            if (input.toLowerCase().startsWith('0b')) {
+                return parseInt(input.slice(2), 2);
+            }
+            // Handle decimal
+            return parseFloat(input);
+        }
+        return input;
     },
 
     /**
-     * Convert the timestamp to a JavaScript Date object
-     * @param {number} timestamp - The timestamp in this format
-     * @returns {Date} JavaScript Date object representing the timestamp
+     * Required: Convert the input into this timestamp format
+     * @param {string|number} input - Raw input value to convert
+     * @returns {number|string} - Converted timestamp value
+     */
+    convert(input) {
+        // Add conversion logic here
+        // This should convert the input into your timestamp format
+        return this.parseInput(input);
+    },
+
+    /**
+     * Required: Convert the timestamp to a JavaScript Date object
+     * @param {number|string} timestamp - Timestamp in this format
+     * @returns {Date} - JavaScript Date object
+     * @throws {Error} - If the timestamp is invalid
      */
     toDate(timestamp) {
-        // Implement conversion to JavaScript Date
-        // Example for Unix epoch seconds:
-        // return new Date(timestamp * 1000);
-        return new Date(/* your conversion here */);
+        // Add logic to convert your timestamp to a JavaScript Date
+        // Example: return new Date(timestamp * 1000);
+        throw new Error('Not implemented');
     }
 };
 

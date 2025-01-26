@@ -1,4 +1,5 @@
 const isoWeekDateConverter = {
+    id: 'isoWeekDate',
     name: 'ISO 8601 Week Date',
     description: 'ISO week-based year and week number (YYYY-Www-D)',
     infoUrl: 'https://en.wikipedia.org/wiki/ISO_week_date',

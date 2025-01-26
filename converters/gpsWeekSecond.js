@@ -1,4 +1,5 @@
 const gpsWeekSecondConverter = {
+    id: 'gpsWeekSecond',
     name: 'GPS Week & Seconds',
     description: 'GPS Week Number and Seconds of Week (since January 6, 1980)',
     infoUrl: 'https://www.gps.gov/technical/icwg/IS-GPS-200K.pdf',

@@ -1,4 +1,5 @@
 const oleAutomationConverter = {
+    id: 'oleAutomation',
     name: 'OLE Automation Date',
     description: 'OLE Automation date as double-precision float, days since December 30, 1899',
     infoUrl: 'https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/dateserial-function',

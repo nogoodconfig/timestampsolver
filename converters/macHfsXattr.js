@@ -1,4 +1,5 @@
 const macHfsXattrConverter = {
+    id: 'macHfsXattr',
     name: 'Mac OS X HFS+ Extended Attributes',
     description: 'HFS+ extended attributes timestamp in nanoseconds since January 1, 2001',
     infoUrl: 'https://developer.apple.com/library/archive/technotes/tn/tn1150.html',

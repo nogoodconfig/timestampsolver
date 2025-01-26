@@ -1,4 +1,5 @@
 const appleHfsConverter = {
+    id: 'appleHfs',
     name: 'Apple HFS/HFS+',
     description: 'Apple HFS/HFS+ timestamp in seconds since January 1, 1904',
     infoUrl: 'https://developer.apple.com/library/archive/technotes/tn/tn1150.html',

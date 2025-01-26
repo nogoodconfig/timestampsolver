@@ -1,4 +1,5 @@
 const msdosFatConverter = {
+    id: 'msdosFat',
     name: 'MS-DOS FAT (32-bit)',
     description: 'MS-DOS FAT filesystem timestamp encoding date and time in a 32-bit value',
     infoUrl: 'https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-dosdatetimetofiletime',

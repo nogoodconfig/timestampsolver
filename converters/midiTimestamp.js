@@ -1,4 +1,5 @@
 const midiTimestampConverter = {
+    id: 'midiTimestamp',
     name: 'MIDI Timestamp',
     description: 'MIDI timestamp in ticks (default: 480 PPQN)',
     infoUrl: 'https://www.midi.org/specifications/midi-2-0-specifications',

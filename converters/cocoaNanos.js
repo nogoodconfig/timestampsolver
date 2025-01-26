@@ -1,4 +1,5 @@
 const cocoaNanosConverter = {
+    id: 'cocoaNanos',
     name: 'Cocoa Core Data (Nanoseconds)',
     description: 'Apple Cocoa Core Data timestamp in nanoseconds since January 1, 2001',
     infoUrl: 'https://developer.apple.com/documentation/corefoundation/cfabsolutetime',

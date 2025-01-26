@@ -1,4 +1,5 @@
 const sasDatetimeConverter = {
+    id: 'sasDatetime',
     name: 'SAS Datetime (Seconds)',
     description: 'SAS 4GL datetime timestamp in seconds since January 1, 1960',
     infoUrl: 'https://documentation.sas.com/doc/en/pgmsascdc/9.4/lrcon/p0ji1unv6thm0qn1gp181rkg4h0d.htm',

@@ -1,4 +1,5 @@
 const cocoaMillisConverter = {
+    id: 'cocoaMillis',
     name: 'Apple Cocoa (Milliseconds)',
     description: 'Apple Cocoa timestamp in milliseconds since January 1, 2001',
     infoUrl: 'https://developer.apple.com/documentation/foundation/date',

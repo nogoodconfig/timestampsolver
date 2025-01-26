@@ -1,4 +1,5 @@
 const javaInstantConverter = {
+    id: 'javaInstant',
     name: 'Java/Kotlin Instant',
     description: 'Java Instant timestamp with seconds and nanoseconds since Unix epoch',
     infoUrl: 'https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html',

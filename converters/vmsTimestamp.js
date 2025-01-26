@@ -1,4 +1,5 @@
 const vmsTimestampConverter = {
+    id: 'vmsTimestamp',
     name: 'OpenVMS Date/Time',
     description: 'OpenVMS timestamp in 100-nanosecond intervals since November 17, 1858',
     infoUrl: 'https://support.hpe.com/hpesc/public/docDisplay?docId=emr_na-c04622340',

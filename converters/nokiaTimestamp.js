@@ -1,4 +1,5 @@
 const nokiaTimestampConverter = {
+    id: 'nokiaTimestamp',
     name: 'Nokia Series 30/40',
     description: 'Nokia Series 30/40 timestamp format (YYYY-MM-DD-HH-MM-SS)',
     infoUrl: 'https://www.dcode.fr/nokia-3310-timestamp',

@@ -1,4 +1,5 @@
 const rfc2550Converter = {
+    id: 'rfc2550',
     name: 'RFC 2550 Date',
     description: 'RFC 2550 Y10K-compliant date format',
     infoUrl: 'https://tools.ietf.org/html/rfc2550',

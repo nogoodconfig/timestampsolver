@@ -1,4 +1,5 @@
 const webkitTimestampConverter = {
+    id: 'webkitTimestamp',
     name: 'WebKit Timestamp',
     description: 'WebKit/Safari timestamp in microseconds since January 1, 1601',
     infoUrl: 'https://webkit.org/blog/',

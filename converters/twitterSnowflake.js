@@ -1,4 +1,5 @@
 const twitterSnowflakeConverter = {
+    id: 'twitterSnowflake',
     name: 'Twitter/X Snowflake ID',
     description: 'Twitter Snowflake ID containing timestamp in milliseconds since November 4, 2010',
     infoUrl: 'https://developer.twitter.com/en/docs/twitter-ids',

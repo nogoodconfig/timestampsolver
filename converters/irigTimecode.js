@@ -1,4 +1,5 @@
 const irigTimecodeConverter = {
+    id: 'irigTimecode',
     name: 'IRIG Timecode',
     description: 'IRIG-B timecode format (DDD:HH:MM:SS)',
     infoUrl: 'https://en.wikipedia.org/wiki/IRIG_timecode',

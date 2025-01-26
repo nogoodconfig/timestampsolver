@@ -1,4 +1,5 @@
 const posixTimespecConverter = {
+    id: 'posixTimespec',
     name: 'POSIX timespec',
     description: 'POSIX timespec structure with seconds and nanoseconds',
     infoUrl: 'https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/time.h.html',

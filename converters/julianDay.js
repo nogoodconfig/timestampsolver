@@ -1,4 +1,5 @@
 const julianDayConverter = {
+    id: 'julianDay',
     name: 'Julian Day Number',
     description: 'Julian Day Number (JDN) counting days since noon on January 1, 4713 BCE',
     infoUrl: 'https://en.wikipedia.org/wiki/Julian_day',

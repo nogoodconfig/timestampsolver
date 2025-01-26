@@ -1,4 +1,5 @@
 const systemTimeConverter = {
+    id: 'systemTime',
     name: 'Windows SYSTEMTIME',
     description: 'Windows SYSTEMTIME structure (16-byte) containing date and time components',
     infoUrl: 'https://learn.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-systemtime',
