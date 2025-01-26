@@ -40,12 +40,4 @@ const microsoftTicksConverter = {
     toDate: function(input) {
         return this.convert(input);
     }
-};
-
-// Register the converter
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = microsoftTicksConverter;
-} else if (typeof window !== 'undefined') {
-    window.timestampConverters = window.timestampConverters || [];
-    window.timestampConverters.push(microsoftTicksConverter);
-} 
+}; 

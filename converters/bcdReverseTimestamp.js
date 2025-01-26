@@ -1,4 +1,4 @@
-const bcdReverseConverter = {
+const bcdReverseTimestampConverter = {
     id: 'bcdReverseTimestamp',
     name: 'Binary Coded Decimal (BCD) Reverse Nibble',
     description: 'Converts Binary Coded Decimal timestamps with reversed nibbles',
@@ -55,12 +55,4 @@ const bcdReverseConverter = {
     toDate: function(input) {
         return this.convert(input);
     }
-};
-
-// Register the converter
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = bcdReverseConverter;
-} else if (typeof window !== 'undefined') {
-    window.timestampConverters = window.timestampConverters || [];
-    window.timestampConverters.push(bcdReverseConverter);
-} 
+}; 

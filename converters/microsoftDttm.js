@@ -42,12 +42,4 @@ const microsoftDttmConverter = {
     toDate: function(input) {
         return this.convert(input);
     }
-};
-
-// Register the converter
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = microsoftDttmConverter;
-} else if (typeof window !== 'undefined') {
-    window.timestampConverters = window.timestampConverters || [];
-    window.timestampConverters.push(microsoftDttmConverter);
-} 
+}; 
