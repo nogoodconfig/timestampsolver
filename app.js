@@ -30,6 +30,8 @@ class TimestampConverter {
             // Special formats
             bcdTimestampConverter,
             bcdReverseTimestampConverter,
+            bcdExtendedTimestampConverter,
+            gsmTimestampConverter,
             
             // Network/Protocol timestamps
             gpsTimeConverter,
