@@ -19,11 +19,17 @@ class TimestampConverter {
             
             // Windows timestamps
             windowsFiletimeConverter,
+            microsoftTicksConverter,
+            microsoftDttmConverter,
             msdosFatConverter,
             ntfsTimestampConverter,
             systemTimeConverter,
             exchangeTimestampConverter,
             oleAutomationConverter,
+            
+            // Special formats
+            bcdTimestampConverter,
+            bcdReverseTimestampConverter,
             
             // Network/Protocol timestamps
             gpsTimeConverter,
